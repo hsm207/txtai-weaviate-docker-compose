@@ -1,1 +1,2 @@
 weaviate-client==3.9.0
+weaviate_txtai==0.1.0a3

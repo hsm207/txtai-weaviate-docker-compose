@@ -8,7 +8,6 @@ services:
     - 8000:8000
     volumes:
       - ./app.yml:/app/app.yaml
-      - ./client.py:/app/client.py
       - ./.cache:/models
     environment:
       - CONFIG=/app/app.yaml

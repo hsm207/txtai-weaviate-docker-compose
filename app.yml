@@ -3,7 +3,7 @@ embeddings:
 
 nop:
 
-client.Weaviate:
+weaviate_txtai.client.Weaviate:
   url: http://weaviate:8080
 
 workflow:
@@ -12,11 +12,11 @@ workflow:
     tasks:
     - action: [nop, transform]
       unpack: False
-    - action: client.Weaviate
+    - action: weaviate_txtai.client.Weaviate
       unpack: False
   search:
     tasks:
     - action: transform
-    - action: client.Weaviate
+    - action: weaviate_txtai.client.Weaviate
       args: [search]
  

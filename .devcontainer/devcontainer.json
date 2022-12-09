@@ -6,7 +6,7 @@
 	"features": {
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {}
 	},
-	"extensions": ["humao.rest-client"]
+	"extensions": ["humao.rest-client", "eamodio.gitlens"]
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 

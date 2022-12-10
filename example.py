@@ -1,25 +1,13 @@
 from datasets import load_dataset
+import requests
 
-from txtai.app import Application
+URL = "http://localhost:8000"
 
-# Load sample dataset
 ds = load_dataset("ag_news", split="train")
 
-# Load txtai application
-app = Application("app.yml")
+payload = {
+    "name": "index",
+    "elements": ds["text"]
+}
 
-# Index data
-for _ in app.workflow("index", ds["text"][0:100]):
-    pass
-
-while True:
-    query = input("Enter query: ")
-    if query == 'q':
-        break
-
-    for result in app.workflow("search", [query]):
-        print(result)
-        print("------------------------------------------------------------------------------------------------")
-        print("-----------------------------------Most similar text -------------------------------------------")
-        print(result['data']['Get']['Post'][0]['content'])
-        print("------------------------------------------------------------------------------------------------")
+r = requests.post(f"{URL}/workflow", json=payload)

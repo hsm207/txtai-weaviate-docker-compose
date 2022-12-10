@@ -55,3 +55,19 @@ query {
     }
   }
 }
+
+###
+# count the number of Documents
+POST http://localhost:8080/v1/graphql
+X-Request-Type: GraphQL
+Content-Type: application/json
+
+query {
+  Aggregate {
+    Document {
+      meta {
+        count
+      }
+    }
+  }
+}

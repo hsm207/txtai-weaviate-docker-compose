@@ -1,2 +1,2 @@
-weaviate-client==3.9.0
-weaviate_txtai==0.1.0a3
+datasets==2.7.1
+requests==2.28.1

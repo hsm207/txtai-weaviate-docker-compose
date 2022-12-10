@@ -47,7 +47,7 @@ Content-Type: application/json
 
 query {
   Get {
-    Post {
+    Document {
         content
         _additional {
           vector

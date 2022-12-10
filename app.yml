@@ -1,5 +1,5 @@
 embeddings:
-  path: sentence-transformers/nli-mpnet-base-v2
+  path: sentence-transformers/all-MiniLM-L6-v2
 
 nop:
 
